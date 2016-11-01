@@ -6,7 +6,6 @@ Post type: project
 
 piklist('field', array(
     'type' => 'group',
-    'field' => 'info_projects',
     'colums' => 12,
     'list'  => false,
     'template'	=> 'field',
@@ -16,7 +15,7 @@ piklist('field', array(
             'field' => 'date_project',
             'label' => 'Data',
             'options' => array(
-                'dateFormat' => 'dd-mm-yy'
+                'dateFormat' => 'yy-mm-dd'
             ),
             'columns' => 6,
             'attributes' => array(
@@ -62,7 +61,7 @@ piklist('field', array(
           center: {lat: 46.0074, lng: 8.9594},
           zoom: 13
         });
-        var input = document.getElementById('_post_meta_info_projects_place_project_0');
+        var input = document.getElementById('_post_meta_place_project_0');
 
         var autocomplete = new google.maps.places.Autocomplete(input);
         autocomplete.bindTo('bounds', map);

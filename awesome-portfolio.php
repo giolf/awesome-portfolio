@@ -19,4 +19,5 @@ include_once( WP_PLUGIN_DIR . "/awesome-portfolio/hooks/checker.php" );
  * Register the custom post type: 'project'
  */
 include_once( WP_PLUGIN_DIR . "/awesome-portfolio/hooks/project-post-type.php" );
+
 ?>
