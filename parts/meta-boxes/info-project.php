@@ -48,3 +48,14 @@ piklist('field', array(
 ));
 
 ?>
+<script>
+    function initAutocomplete() {
+        // Create the autocomplete object, restricting the search to geographical
+        // location types.
+        new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */(document.getElementById('_post_meta_info_projects_place_project_0')),
+            {types: ['geocode']}
+        );
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyYF-LZWdVU2asSa_rLe8i1XLvea3sHjQ&libraries=places&callback=initAutocomplete" async defer></script>
