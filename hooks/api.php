@@ -15,7 +15,6 @@ function ajax_get_projects() {
         $prj->post_content = trans(
             $prj->post_content
         );
-
         $prj->place = get_post_meta(
             $prj->ID, 'place_project',
             true
@@ -24,6 +23,14 @@ function ajax_get_projects() {
             $prj->ID, 'date_project',
             true
         );
+        $prj->f_file = wp_get_attachment_image_src(
+            get_post_meta(
+                $prj->ID,
+                'featured_file_project',
+                true
+            ),
+            'medium' // !!! still need to create the right thumb size !!!
+        )[0];
 
     endwhile;
 
