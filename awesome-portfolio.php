@@ -20,4 +20,15 @@ include_once( WP_PLUGIN_DIR . "/awesome-portfolio/hooks/checker.php" );
  */
 include_once( WP_PLUGIN_DIR . "/awesome-portfolio/hooks/project-post-type.php" );
 
+
+/**
+ * Include the Ajax library on the front end
+ */
+include_once( WP_PLUGIN_DIR . "/awesome-portfolio/hooks/ajax-library.php");
+
+
+/**
+ * Awesome Portfolio API
+ */
+include_once( WP_PLUGIN_DIR . "/awesome-portfolio/hooks/api.php");
 ?>
