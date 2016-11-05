@@ -3,7 +3,10 @@ add_action( 'wp_ajax_nopriv_get_projects', 'ajax_get_projects' );
 add_action( 'wp_ajax_get_projects', 'ajax_get_projects' );
 function ajax_get_projects() {
 
-    $query = new WP_Query(['post_type' => 'project']);
+    $query = new WP_Query([
+        'post_type' => 'project',
+        'post_status' => 'publish'
+    ]);
 
     while ( $query->have_posts() ) :
 
