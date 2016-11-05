@@ -1,0 +1,22 @@
+{
+  "name": "awesome-portfolio",
+  "version": "1.0.0",
+  "description": "Awesome Portfolio - WordPress Plugin",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giolf/awesome-portfolio.git"
+  },
+  "author": "Giovanni Far",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/giolf/awesome-portfolio/issues"
+  },
+  "homepage": "https://github.com/giolf/awesome-portfolio#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
