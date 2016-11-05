@@ -1,0 +1,21 @@
+{
+  "name": "awesome-portfolio",
+  "description": "Awesome Portfolio - WordPress Plugin",
+  "main": "gulpfile.js",
+  "authors": [
+    "Giovanni Far"
+  ],
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/giolf/awesome-portfolio",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "uikit": "^2.27.2"
+  }
+}
