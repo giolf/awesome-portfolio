@@ -3,8 +3,8 @@ var gulp = require('gulp');
 var paths = {
     apTmpl: {
         src: [
-            'single-project.php',
-            'template-projects.php'
+            'templates/single-project.php',
+            'templates/template-projects.php'
         ],
         dist: '../../themes/organic_photographer/'
     }
