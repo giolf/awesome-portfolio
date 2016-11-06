@@ -23,6 +23,7 @@
     "gulp": "^3.9.1",
     "gulp-flatten": "^0.3.1",
     "gulp-sass": "^2.3.2",
+    "gulp-total-task-time": "^0.1.0",
     "jquery": "^3.1.1",
     "webpack": "^1.13.3",
     "webpack-stream": "^3.2.0"

@@ -1,7 +1,8 @@
-var gulp    = require('gulp');
-var webpack = require('webpack-stream');
-var sass    = require('gulp-sass');
-var flatten = require('gulp-flatten');
+var gulp     = require('gulp');
+var webpack  = require('webpack-stream');
+var sass     = require('gulp-sass');
+var flatten  = require('gulp-flatten');
+var taskTime = require('gulp-total-task-time');
 
 var paths = {
     apTmpl: {
@@ -21,9 +22,11 @@ var paths = {
     }
 };
 
+taskTime.init();
+
 gulp.task('copy-ap-templates', function() {
     gulp.src(paths.apTmpl.src)
-    .pipe(gulp.dest(paths.apTmpl.dest));
+        .pipe(gulp.dest(paths.apTmpl.dest));
 });
 
 gulp.task('sass', function() {
