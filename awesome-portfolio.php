@@ -1,4 +1,5 @@
 <?php
+
 /*
 Plugin Name: Awesome Portfolio
 Plugin URI: https://github.com/giolf/awesome-portfolio
@@ -31,4 +32,10 @@ include_once( WP_PLUGIN_DIR . "/awesome-portfolio/hooks/ajax-library.php");
  * Awesome Portfolio API
  */
 include_once( WP_PLUGIN_DIR . "/awesome-portfolio/hooks/api.php");
+
+/**
+ * Awesome Portfolio scripts and styles
+ */
+include_once( WP_PLUGIN_DIR . "/awesome-portfolio/hooks/scripts_styles.php");
+
 ?>
