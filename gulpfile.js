@@ -29,23 +29,23 @@ var paths = {
 taskTime.init();
 
 gulp.task('copy-ap-templates', function() {
-    gulp.src(paths.apTmpl.src)
+    return gulp.src(paths.apTmpl.src)
         .pipe(gulp.dest(paths.apTmpl.dest));
 });
 
-gulp.task('copy-fonts', function() {
-    gulp.src(paths.fonts.src)
+gulp.task('copy-fonts', ['copy-ap-templates'], function() {
+    return gulp.src(paths.fonts.src)
         .pipe(gulp.dest(paths.fonts.dest));
 });
 
-gulp.task('sass', function() {
-    gulp.src(paths.sass.src)
+gulp.task('sass', ['copy-fonts'], function() {
+    return gulp.src(paths.sass.src)
         .pipe(sass().on('error', sass.logError))
         .pipe(flatten())
         .pipe(gulp.dest(paths.sass.dest));
 });
 
-gulp.task('webpack', function() {
+gulp.task('webpack', ['sass'], function() {
     return webpack(require(paths.webpack.config))
         .pipe(gulp.dest(paths.webpack.dest));
 });
@@ -56,4 +56,4 @@ gulp.task('watch', function() {
     gulp.watch(paths.sass.src, ['sass']);
 });
 
-gulp.task('default', ['copy-ap-templates', 'sass', 'webpack']);
+gulp.task('default', ['copy-ap-templates', 'copy-fonts', 'sass', 'webpack']);
