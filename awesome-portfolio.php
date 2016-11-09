@@ -38,4 +38,9 @@ include_once( WP_PLUGIN_DIR . "/awesome-portfolio/hooks/api.php");
  */
 include_once( WP_PLUGIN_DIR . "/awesome-portfolio/hooks/scripts_styles.php");
 
+/**
+ * Add new image size for the gallery and the single project image
+ */
+include_once( WP_PLUGIN_DIR . "/awesome-portfolio/hooks/thumbs.php");
+
 ?>
