@@ -2,7 +2,7 @@
 /**
  * Plugin:   Awesome Portfolio
  * Template: single-project
- * Author:   Giovanni
+ * Author:   Giovanni Far
  */
 ?>
 <?php $prj_data = apply_filters( 'display_single_project', false ); ?>
