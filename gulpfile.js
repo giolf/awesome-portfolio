@@ -6,7 +6,7 @@ var taskTime = require('gulp-total-task-time');
 
 var paths = {
     apTmpl: {
-        src: 'templates/*',
+        src: 'src/templates/*',
         dest: '../../themes/organic_photographer/'
     },
     fonts: {

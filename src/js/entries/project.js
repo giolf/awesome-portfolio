@@ -1,1 +1,1 @@
-console.log("projecdt");
+require('../uikit-common.js');

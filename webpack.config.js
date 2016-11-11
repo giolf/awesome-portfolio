@@ -15,16 +15,16 @@ module.exports = {
             { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
         ]
     },
-    plugins: [
-        new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery",
-            jquery: "jquery",
-            "window.jQuery": "jquery"
-        })
-        //,
-        // new webpack.optimize.UglifyJsPlugin({
-        //     compress: { warnings: false }
-        // })
-    ]
+    // plugins: [
+    //     // new webpack.ProvidePlugin({
+    //     //     $: "jquery",
+    //     //     jQuery: "jquery",
+    //     //     jquery: "jquery",
+    //     //     "window.jQuery": "jquery"
+    //     // })
+    //     // ,
+    //     // new webpack.optimize.UglifyJsPlugin({
+    //     //     compress: { warnings: false }
+    //     // })
+    // ]
 };

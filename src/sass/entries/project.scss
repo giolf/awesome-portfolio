@@ -1,5 +1,24 @@
-@import "../../../node_modules/bower_components/uikit/scss/uikit-mixins.scss";
-@import "../../../node_modules/bower_components/uikit/scss/uikit-variables.scss";
-@import "../../../node_modules/bower_components/uikit/scss/core/grid.scss";
+// UIkit Common dependencies
+@import "../uikit-common.scss";
+
+// UIKit project dependencies
 @import "../../../node_modules/bower_components/uikit/scss/core/cover.scss";
-@import "../../../node_modules/bower_components/uikit/scss/core/utility.scss";
+@import "../../../node_modules/bower_components/uikit/scss/core/text.scss";
+@import "../../../node_modules/bower_components/uikit/scss/core/close.scss";
+@import "../../../node_modules/bower_components/uikit/scss/core/modal.scss";
+@import "../../../node_modules/bower_components/uikit/scss/components/slidenav.scss";
+@import "../../../node_modules/bower_components/uikit/scss/components/slider.scss";
+
+.single-prj-date {
+    font-size: 30px;
+    @media only screen and (max-width: $tablet-size) {
+        font-size: 20px;
+    }
+}
+
+.single-prj-gallery {
+    margin-top: 5px !important;
+    li  {
+        padding-bottom: 0px !important;
+    }
+}
