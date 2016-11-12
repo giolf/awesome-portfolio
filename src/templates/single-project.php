@@ -17,10 +17,15 @@
 
             <div id="slideshow" class="slideshow-page">
 
-                <div class="single-prj-img uk-cover-background"
-                    style="height: 400px; background-image: url(<?php echo $prj_data['featured_prj_image'] ?>">
-                </div>
-
+                <?php if ($prj_data['main_file_type'] == 'img') : ?>
+                    <div class="single-prj-img uk-cover-background"
+                        style="height: 400px; background-image: url(<?php echo $prj_data['featured_prj_image'] ?>">
+                    </div>
+                <?php else : ?>
+                    <video controls class="uk-responsive-width" width="900">
+                        <source src="<?php echo $prj_data['featured_prj_video'] ?>" type="video/mp4">
+                    </video>
+                <?php endif; ?>
                 <div class="single-prj-gallery uk-slidenav-position" data-uk-slider="{infinite: true}">
 
                     <div class="uk-slider-container">
