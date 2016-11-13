@@ -7,12 +7,13 @@ function get_project_data() {
 
     // Get the common project's info
     $prj_data = array(
-        'title' => $post->post_name,
+        'title' => $post->post_title,
         'place' => get_post_meta( $post->ID, 'place_project', true ),
         'date'  => (new DateTime(
             get_post_meta( $post->ID, 'date_project', true )
         ))->format('d-m-Y'),
-        'gallery' => array()
+        'gallery' => array(),
+        'content' => $post->post_content
     );
 
     // Check if the main project file is a movie or an image

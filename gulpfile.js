@@ -10,14 +10,15 @@ var paths = {
         dest: '../../themes/organic_photographer/'
     },
     fonts: {
-        src: './node_modules/bower_components/uikit/fonts/*',
+        srcUIkit: './node_modules/bower_components/uikit/fonts/*',
+        srcAPort: './src/fonts/*',
         dest: './dist/fonts/'
     },
     js: {
         src: './src/js/**/*.js'
     },
     sass: {
-        src: 'src/sass/**/*.scss',
+        src: './src/sass/**/*.scss',
         dest: './dist/css/'
     },
     webpack: {
@@ -34,8 +35,11 @@ gulp.task('copy-ap-templates', function() {
 });
 
 gulp.task('copy-fonts', ['copy-ap-templates'], function() {
-    return gulp.src(paths.fonts.src)
-        .pipe(gulp.dest(paths.fonts.dest));
+    return gulp.src([
+        paths.fonts.srcUIkit,
+        paths.fonts.srcAPort
+    ])
+    .pipe(gulp.dest(paths.fonts.dest));
 });
 
 gulp.task('sass', ['copy-fonts'], function() {

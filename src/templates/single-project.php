@@ -26,7 +26,7 @@
                         <source src="<?php echo $prj_data['featured_prj_video'] ?>" type="video/mp4">
                     </video>
                 <?php endif; ?>
-                <div class="single-prj-gallery uk-slidenav-position" data-uk-slider="{infinite: true}">
+                <div class="single-prj-gallery uk-slidenav-position" data-uk-slider="{infinite: false}">
 
                     <div class="uk-slider-container">
                         <ul class="uk-slider uk-grid uk-grid-width-1-6"
