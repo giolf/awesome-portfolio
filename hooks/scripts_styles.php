@@ -13,7 +13,16 @@ function styles_and_scripts() {
             plugins_url('../dist/js/project.bundle.js', __FILE__)
         );
     }
-
+    else if ( get_page_template_slug( get_the_ID() ) == 'template-projects.php' ) {
+        wp_enqueue_style(
+            'awesome-portoflio-project',
+            plugins_url('../dist/css/projects.css', __FILE__ )
+        );
+        wp_enqueue_script(
+            'awesome-portfolio-project',
+            plugins_url('../dist/js/projects.bundle.js', __FILE__)
+        );
+    }
 }
 
 ?>
