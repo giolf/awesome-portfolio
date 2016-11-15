@@ -15,25 +15,47 @@ function ajax_get_projects() {
         $prj->post_title = trans(
             $prj->post_title
         );
+
         $prj->post_content = trans(
             $prj->post_content
         );
+
         $prj->place = get_post_meta(
             $prj->ID, 'place_project',
             true
         );
+
         $prj->date = get_post_meta(
             $prj->ID, 'date_project',
             true
         );
-        $prj->f_file = wp_get_attachment_image_src(
+
+        $file_format = wp_get_attachment_metadata(
             get_post_meta(
                 $prj->ID,
                 'featured_file_project',
                 true
-            ),
-            'medium' // !!! still need to create the right thumb size !!!
-        )[0];
+            )
+        )['mime_type'];
+
+        // Check if the main project file is a movie or an image
+        if ($file_format == 'video/quicktime') {
+            $prj->f_img = wp_get_attachment_image_src(
+                get_post_meta($prj->ID, 'images_project')[0],
+                'featured_prj_image' // !!! still need to create the right thumb size !!!
+            )[0];
+        }
+        else {
+            $prj->f_img = wp_get_attachment_image_src(
+                get_post_meta(
+                    $prj->ID,
+                    'featured_file_project',
+                    true
+                ),
+                'featured_prj_image' // !!! still need to create the right thumb size !!!
+            )[0];
+        }
+
 
     endwhile;
 
