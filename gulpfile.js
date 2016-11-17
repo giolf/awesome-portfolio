@@ -19,6 +19,7 @@ var paths = {
     },
     sass: {
         src: './src/sass/**/*.scss',
+        entries: './src/sass/entries/*.scss',
         dest: './dist/css/'
     },
     webpack: {
@@ -43,7 +44,7 @@ gulp.task('copy-fonts', ['copy-ap-templates'], function() {
 });
 
 gulp.task('sass', ['copy-fonts'], function() {
-    return gulp.src(paths.sass.src)
+    return gulp.src(paths.sass.entries)
         .pipe(sass().on('error', sass.logError))
         .pipe(flatten())
         .pipe(gulp.dest(paths.sass.dest));

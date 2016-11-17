@@ -15,7 +15,11 @@
         <div class="twelve columns">
 
             <div id="slideshow" class="slideshow-page">
-                
+
+                <div v-cloak id="app-projects">
+                    {{ projects }}
+                </div>
+
             </div>
 
         </div>
