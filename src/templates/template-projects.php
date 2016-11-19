@@ -18,6 +18,7 @@
 
                 <div v-cloak id="app-projects">
                     {{ projects }}
+                    <projects-table></projects-table>
                 </div>
 
             </div>

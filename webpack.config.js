@@ -12,13 +12,15 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
+            { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
+            { test: /\.vue$/, loader: 'vue' },
         ]
     },
+    vue: {
+        loaders: { js: 'babel' }
+    },
     resolve: {
-        alias: {
-            'vue$': 'vue/dist/vue.js'
-        }
+        alias: { 'vue$': 'vue/dist/vue.js' }
     }
     // plugins: [
     //     // new webpack.ProvidePlugin({

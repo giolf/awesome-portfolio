@@ -22,6 +22,9 @@ var paths = {
         entries: './src/sass/entries/*.scss',
         dest: './dist/css/'
     },
+    vueComponents: {
+        src: './src/js/components/**/*.vue'
+    },
     webpack: {
         config: './webpack.config.js',
         dest: './dist/js/'
@@ -58,6 +61,7 @@ gulp.task('webpack', ['sass'], function() {
 gulp.task('watch', function() {
     gulp.watch(paths.apTmpl.src, ['copy-ap-templates']);
     gulp.watch(paths.js.src, ['webpack']);
+    gulp.watch(paths.vueComponents.src, ['webpack']);
     gulp.watch(paths.sass.src, ['sass']);
 });
 
