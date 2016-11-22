@@ -42,7 +42,7 @@ function ajax_get_projects() {
         if ($file_format == 'video/quicktime') {
             $prj->f_img = wp_get_attachment_image_src(
                 get_post_meta($prj->ID, 'images_project')[0],
-                'featured_prj_image' // !!! still need to create the right thumb size !!!
+                'featured_table_project'
             )[0];
         }
         else {
@@ -52,7 +52,7 @@ function ajax_get_projects() {
                     'featured_file_project',
                     true
                 ),
-                'featured_prj_image' // !!! still need to create the right thumb size !!!
+                'featured_table_project'
             )[0];
         }
 
