@@ -18,6 +18,7 @@
 
                 <div v-cloak id="app-projects">
                     <projects-table></projects-table>
+                    <more></more>
                 </div>
 
             </div>

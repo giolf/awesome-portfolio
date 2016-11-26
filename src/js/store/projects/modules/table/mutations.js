@@ -1,5 +1,5 @@
 export default {
-    setProjectsList: (state, projects) => {
+    setProjectsList(state, projects) {
         state.projects = projects;
     }
 };

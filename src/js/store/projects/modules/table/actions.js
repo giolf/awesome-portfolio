@@ -2,14 +2,17 @@ import Vue from 'vue';
 import API from '../../../../API/API';
 
 export default {
-    getProjects({ commit }) {
-        API.projects().then(
-            (response) => {
-                commit('setProjectsList', response.data);
-            },
-            (errors) => {
-            console.log(errors);
-            }
-        );
+    getProjects({ dispatch, commit }, paginator) {
+        return new Promise((resolve, reject) => {
+            API.projects(paginator.page).then(
+                (response) => {
+                    commit('setProjectsList', response.data);
+                    resolve();
+                },
+                (errors) => {
+                    reject(errors);
+                }
+            );
+        });
     }
 };

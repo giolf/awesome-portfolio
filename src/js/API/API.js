@@ -1,11 +1,12 @@
 import Vue from 'vue';
 
 class API {
-    projects() {
+    projects(page) {
         return Vue.http.get(
             '/wp-admin/admin-ajax.php',
             { params: {
-                action: 'get_projects'
+                action: 'get_projects',
+                page: page
             }}
         );
     }

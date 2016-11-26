@@ -5,7 +5,13 @@
 @import '../../../node_modules/bower_components/uikit/scss/core/overlay.scss';
 @import "../../../node_modules/bower_components/uikit/scss/core/cover.scss";
 @import "../../../node_modules/bower_components/uikit/scss/core/text.scss";
+@import "../../../node_modules/bower_components/uikit/scss/core/animation.scss";
+@import "../../../node_modules/bower_components/uikit/scss/core/button.scss";
 
 [v-cloak] {
   display: none;
+}
+
+#slideshow {
+    padding-bottom: 25px !important;
 }
