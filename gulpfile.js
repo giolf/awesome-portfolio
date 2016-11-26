@@ -65,4 +65,4 @@ gulp.task('watch', function() {
     gulp.watch(paths.sass.src, ['sass']);
 });
 
-gulp.task('default', ['copy-ap-templates', 'copy-fonts', 'sass', 'webpack']);
+gulp.task('default', ['copy-ap-templates', 'copy-fonts', 'sass', 'webpack', 'watch']);
