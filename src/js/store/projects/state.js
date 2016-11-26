@@ -1,5 +1,6 @@
 export default {
     appState: {
-        ready: false
+        ready: false,
+        loading: false
     }
 };
