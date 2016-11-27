@@ -11,7 +11,8 @@
         },
         computed: {
             ...mapGetters([
-                'projectsList'
+                'projectsList',
+                'isAppReady'
             ])
         },
         methods: {
@@ -24,7 +25,7 @@
 </script>
 
 <template>
-    <div v-cloak class="awesome-portfolio projects-table" data-uk-grid-margin>
+    <div v-cloak v-if="isAppReady" class="awesome-portfolio projects-table" data-uk-grid-margin>
         <div class="uk-grid" data-uk-grid="{gutter: 20}">
             <div v-for="project in projectsList" class="uk-width-small-1-2 uk-width-medium-1-3 uk-width-large-1-4">
                 <figure class="uk-overlay uk-overlay-hover" data-uk-scrollspy="{cls:'uk-animation-fade', repeat: false, delay:0}">

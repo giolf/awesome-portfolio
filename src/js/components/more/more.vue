@@ -4,14 +4,15 @@
     export default {
         computed: {
             ...mapGetters([
-                'appReady'
+                'isAppLoading',
+                'isAppReady'
             ])
         }
     }
 </script>
 
 <template>
-    <div v-if="appReady" class="aw-load-more uk-width-medium-1-1 uk-text-center">
+    <div v-show="!isAppLoading && isAppReady" class="aw-load-more uk-width-medium-1-1 uk-text-center">
         <button class="uk-button">
             <i class="uk-icon-cloud-download"></i>
             More

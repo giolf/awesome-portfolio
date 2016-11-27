@@ -1,8 +1,8 @@
 export default {
-    appReady(state) {
+    isAppReady(state) {
         return state.appState.ready;
     },
-    appLoading(state) {
+    isAppLoading(state) {
         return state.appState.loading;
     }
 };
