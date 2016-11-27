@@ -3,6 +3,6 @@ export default {
         commit('setAppReady', appState);
     },
     appLoading({ commit }, appLoading) {
-        commit('settAppLoading', appLoading);
+        commit('setAppLoading', appLoading);
     }
 };

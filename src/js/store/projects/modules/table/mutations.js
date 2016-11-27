@@ -1,5 +1,7 @@
 export default {
     setProjectsList(state, projects) {
-        state.projects = projects;
+        projects.forEach(project => {
+            state.projects.push(project);
+        });
     }
 };

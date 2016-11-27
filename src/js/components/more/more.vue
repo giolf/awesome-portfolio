@@ -1,5 +1,6 @@
 <script>
     import { mapGetters } from 'vuex';
+    import { mapActions } from 'vuex';
 
     export default {
         computed: {
@@ -7,13 +8,18 @@
                 'isAppLoading',
                 'isAppReady'
             ])
+        },
+        methods: {
+            ...mapActions([
+                'moreProjects'
+            ])
         }
     }
 </script>
 
 <template>
     <div v-show="!isAppLoading && isAppReady" class="aw-load-more uk-width-medium-1-1 uk-text-center">
-        <button class="uk-button">
+        <button @click="moreProjects" class="uk-button">
             <i class="uk-icon-cloud-download"></i>
             More
         </button>

@@ -7,6 +7,9 @@ import mainActions from '../projects/actions';
 import mainMutations from '../projects/mutations';
 // Table module
 import tableModule from './modules/table/module';
+// More module
+import moreModule from './modules/more/module';
+
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -16,5 +19,6 @@ export default new Vuex.Store({
     mutations: mainMutations,
     modules: {
         tableModule: tableModule,
+        moreModule: moreModule
     }
 });
