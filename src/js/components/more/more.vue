@@ -18,15 +18,28 @@
 </script>
 
 <template>
-    <div v-show="!isAppLoading && isAppReady" class="aw-load-more uk-width-medium-1-1 uk-text-center">
-        <button @click="moreProjects" class="uk-button">
-            <i class="uk-icon-cloud-download"></i>
-            More
-        </button>
+    <div class="awesome-portoflio more">
+        <div v-show="isAppLoading" class="aw-load-spinner uk-width-medium-1-1 uk-text-center">
+            <i class="uk-icon-spinner uk-icon-spin"></i>
+        </div>
+        <div v-show="!isAppLoading && isAppReady" class="aw-load-more uk-width-medium-1-1 uk-text-center">
+            <button @click="moreProjects" class="uk-button">
+                <i class="uk-icon-cloud-download"></i>
+                More
+            </button>
+        </div>
     </div>
 </template>
 
 <style>
+    .aw-load-spinner {
+        margin-top: 15px;
+    }
+
+    .aw-load-spinner .uk-icon-spinner {
+        font-size: 25px;
+    }
+
     .aw-load-more {
         margin-top: 15px;
         font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
