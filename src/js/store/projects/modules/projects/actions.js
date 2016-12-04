@@ -7,6 +7,9 @@ export default {
             API.projects(paginator.page).then(
                 (response) => {
                     commit('setProjectsList', response.data);
+                    jQuery(".spinner.app-loading").css(
+                        'display', 'none'
+                    );
                     resolve();
                 },
                 (errors) => {

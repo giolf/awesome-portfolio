@@ -18,7 +18,7 @@
 </script>
 
 <template>
-    <div class="awesome-portoflio more">
+    <div v-cloak class="awesome-portoflio more">
         <div v-show="isAppLoading" class="aw-load-spinner uk-width-medium-1-1 uk-text-center">
             <i class="uk-icon-spinner uk-icon-spin"></i>
         </div>
