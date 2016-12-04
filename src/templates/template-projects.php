@@ -15,13 +15,12 @@
         <div class="twelve columns">
 
             <div id="slideshow" class="slideshow-page">
-                <div class="spinner app-loading">
-                    <div class="bounce1"></div>
-                    <div class="bounce2"></div>
-                    <div class="bounce3"></div>
-                </div>
-
-                <div v-cloak id="app-projects">
+                <div id="app-projects">
+                    <div v-if="!isAppReady" class="spinner app-loading">
+                        <div class="bounce1"></div>
+                        <div class="bounce2"></div>
+                        <div class="bounce3"></div>
+                    </div>
                     <projects></projects>
                     <more></more>
                 </div>

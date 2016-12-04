@@ -7,6 +7,8 @@ import Vue from 'vue';
 import VueResource from 'vue-resource';
 // Store
 import store from '../store/projects/store';
+// Getters
+import { mapGetters } from 'vuex';
 // Components
 import Projects from '../components/projects/projects.vue';
 import More from '../components/more/more.vue';
@@ -17,6 +19,11 @@ window.onload = () => {
     new Vue({
         el: '#app-projects',
         store,
+        computed: {
+            ...mapGetters([
+                'isAppReady'
+            ])
+        },
         components: {
             'projects': Projects,
             'more': More
