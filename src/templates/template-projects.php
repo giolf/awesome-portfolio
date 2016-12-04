@@ -17,7 +17,7 @@
             <div id="slideshow" class="slideshow-page">
 
                 <div v-cloak id="app-projects">
-                    <projects-table></projects-table>
+                    <projects></projects>
                     <more></more>
                 </div>
 

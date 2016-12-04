@@ -6,7 +6,7 @@ import mainGetters from '../projects/getters';
 import mainActions from '../projects/actions';
 import mainMutations from '../projects/mutations';
 // Table module
-import tableModule from './modules/table/module';
+import projectsModule from './modules/projects/module';
 // More module
 import moreModule from './modules/more/module';
 
@@ -18,7 +18,7 @@ export default new Vuex.Store({
     actions: mainActions,
     mutations: mainMutations,
     modules: {
-        tableModule: tableModule,
+        projectsModule: projectsModule,
         moreModule: moreModule
     }
 });

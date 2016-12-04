@@ -8,7 +8,7 @@ import VueResource from 'vue-resource';
 // Store
 import store from '../store/projects/store';
 // Components
-import ProjectsTable from '../components/projects/projectsTable.vue';
+import Projects from '../components/projects/projects.vue';
 import More from '../components/more/more.vue';
 
 Vue.use(VueResource);
@@ -18,7 +18,7 @@ window.onload = () => {
         el: '#app-projects',
         store,
         components: {
-            'projects-table': ProjectsTable,
+            'projects': Projects,
             'more': More
         }
     });
