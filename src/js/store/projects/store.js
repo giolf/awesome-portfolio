@@ -1,10 +1,10 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 // Store
-import mainState from '../projects/state';
-import mainGetters from '../projects/getters';
-import mainActions from '../projects/actions';
-import mainMutations from '../projects/mutations';
+import appState from './state';
+import appGetters from './getters';
+import appActions from './actions';
+import appMutations from './mutations';
 // Table module
 import projectsModule from '../modules/projects/module';
 // More module
@@ -13,10 +13,10 @@ import moreModule from '../modules/more/module';
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-    state: mainState,
-    getters: mainGetters,
-    actions: mainActions,
-    mutations: mainMutations,
+    state: appState,
+    getters: appGetters,
+    actions: appActions,
+    mutations: appMutations,
     modules: {
         projectsModule: projectsModule,
         moreModule: moreModule
