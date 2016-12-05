@@ -6,9 +6,9 @@ import mainGetters from '../projects/getters';
 import mainActions from '../projects/actions';
 import mainMutations from '../projects/mutations';
 // Table module
-import projectsModule from './modules/projects/module';
+import projectsModule from '../modules/projects/module';
 // More module
-import moreModule from './modules/more/module';
+import moreModule from '../modules/more/module';
 
 Vue.use(Vuex);
 

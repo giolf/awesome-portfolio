@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import API from '../../../../API/API';
+import API from '../../../API/API';
 
 export default {
     getProjects({ dispatch, commit }, paginator) {
