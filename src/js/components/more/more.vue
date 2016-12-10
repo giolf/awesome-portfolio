@@ -3,6 +3,15 @@
     import { mapActions } from 'vuex';
 
     export default {
+        props: {
+            configuration: {
+                type: Object,
+                required: true
+            }
+        },
+        mounted() {
+            this.config(this.configuration);
+        },
         computed: {
             ...mapGetters([
                 'isAppLoading',
@@ -11,7 +20,8 @@
         },
         methods: {
             ...mapActions([
-                'moreProjects'
+                'more',
+                'config'
             ])
         }
     }
@@ -27,7 +37,7 @@
             </div>
         </div>
         <div v-show="!isAppLoading && isAppReady" class="aw-load-more uk-width-medium-1-1 uk-text-center">
-            <button @click="moreProjects" class="uk-button">
+            <button @click="more" class="uk-button">
                 <i class="uk-icon-cloud-download"></i>
                 More
             </button>

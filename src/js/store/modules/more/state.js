@@ -1,3 +1,4 @@
 export default {
-    page: 1
+    page: 1,
+    config: null
 };

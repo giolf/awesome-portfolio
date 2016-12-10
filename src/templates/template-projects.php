@@ -22,7 +22,7 @@
                         <div class="bounce3"></div>
                     </div>
                     <projects></projects>
-                    <more></more>
+                    <more :configuration="{actionToCall: 'getProjects'}"></more>
                 </div>
             </div>
 

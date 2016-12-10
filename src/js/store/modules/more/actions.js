@@ -1,8 +1,8 @@
 export default {
-    moreProjects({ commit, dispatch, state }) {
+    more({ commit, dispatch, state }) {
         commit('setAppLoading', true);
         commit('incrementPage');
-        dispatch('getProjects', {page: state.page}).then(
+        dispatch(state.config.actionToCall, {page: state.page}).then(
             () => {
                 commit('setAppLoading', false);
             },
@@ -10,5 +10,8 @@ export default {
                 console.log(errors);
             }
         );
+    },
+    config({ commit, state}, config) {
+        commit('setConfig', config);
     }
 };
