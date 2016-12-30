@@ -32,7 +32,7 @@ store.modules = {
     moreModule: moreModule
 };
 
-window.onload = () => {
+jQuery(document).ready(() => {
     new Vue({
         el: '#app-projects',
         store: new Vuex.Store(store),
@@ -46,4 +46,4 @@ window.onload = () => {
             'more': More
         }
     });
-};
+});
