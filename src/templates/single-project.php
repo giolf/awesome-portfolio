@@ -32,7 +32,8 @@
                         <ul class="uk-slider uk-grid uk-grid-width-1-6"
                             data-uk-grid="{gutter: 5}">
                             <?php foreach ($prj_data['gallery'] as $link) : ?>
-                                <a id="single-prj-thumb" href="<?php echo $link['full'] ?>" data-uk-lightbox>
+                                <a id="single-prj-thumb" href="<?php echo $link['full'] ?>"
+                                    data-uk-lightbox="{group:'prjs-gallery'}">
                                     <li>
                                         <img src="<?php echo $link['thumb'] ?>">
                                     </li>
