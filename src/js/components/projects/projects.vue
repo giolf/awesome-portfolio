@@ -27,21 +27,23 @@
 <template>
     <div v-cloak v-if="isAppReady" class="awesome-portfolio projects-table">
         <div class="uk-grid">
-            <div v-for="(project, index) in projectsList"
-            class="uk-grid-margin uk-width-small-1-2 uk-width-medium-1-3 uk-width-large-1-4">
-                <figure class="uk-overlay uk-overlay-hover"
-                data-uk-scrollspy="{cls:'uk-animation-fade', repeat: false, delay:1}">
-                    <img class="uk-overlay-scale" :src="project.f_img" width="600" height="400" alt="Image">
-                    <figcaption
-                    class="uk-overlay-panel uk-text-center uk-overlay-background uk-overlay-bottom uk-ignore">
-                        <div class="project-title">
-                            {{ project.post_title }}
-                        </div>
-                        <div class="project-info">
-                            {{ project.date }} | {{ project.place }}
-                        </div>
-                    </figcaption>
-                </figure>
+            <div v-for="project in projectsList"
+                class="uk-grid-margin uk-width-small-1-2 uk-width-medium-1-3 uk-width-large-1-4">
+                <a :href="project.link">
+                    <figure class="uk-overlay uk-overlay-hover"
+                        data-uk-scrollspy="{cls:'uk-animation-fade', repeat: false, delay:1}">
+                        <img class="uk-overlay-scale" :src="project.f_img" width="600" height="400" alt="Image">
+                        <figcaption
+                            class="uk-overlay-panel uk-text-center uk-overlay-background uk-overlay-bottom uk-ignore">
+                            <div class="project-title">
+                                {{ project.post_title }}
+                            </div>
+                            <div class="project-info">
+                                {{ project.date }} | {{ project.place }}
+                            </div>
+                        </figcaption>
+                    </figure>
+                </a>
             </div>
         </div>
     </div>

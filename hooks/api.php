@@ -14,6 +14,8 @@ function ajax_get_projects() {
 
         $prj = $query->next_post();
 
+        $prj->link = get_permalink($prj->ID);
+
         $prj->post_title = trans(
             $prj->post_title
         );
