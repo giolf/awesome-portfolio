@@ -3,7 +3,9 @@ var webpack  = require('webpack-stream');
 var sass     = require('gulp-sass');
 var flatten  = require('gulp-flatten');
 var taskTime = require('gulp-total-task-time');
-
+var environments = require('gulp-environments');
+var development = environments.development;
+var production = environments.production;
 var paths = {
     apTmpl: {
         src: 'src/templates/*',
@@ -48,7 +50,14 @@ gulp.task('copy-fonts', ['copy-ap-templates'], function() {
 
 gulp.task('sass', ['copy-fonts'], function() {
     return gulp.src(paths.sass.entries)
-        .pipe(sass().on('error', sass.logError))
+        .pipe(development(
+            sass()
+            .on('error', sass.logError)
+        ))
+        .pipe(production(
+            sass({outputStyle: 'compressed'})
+            .on('error', sass.logError)
+        ))
         .pipe(flatten())
         .pipe(gulp.dest(paths.sass.dest));
 });
@@ -66,3 +75,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['copy-ap-templates', 'copy-fonts', 'sass', 'webpack', 'watch']);
+gulp.task('build', ['copy-ap-templates', 'copy-fonts', 'sass', 'webpack']);

@@ -1,5 +1,7 @@
 var path = require("path");
 var webpack = require("webpack");
+var environments = require('gulp-environments');
+var production = environments.production;
 
 module.exports = {
     entry: {
@@ -20,18 +22,23 @@ module.exports = {
         loaders: { js: 'babel' }
     },
     resolve: {
-        alias: { 'vue$': 'vue/dist/vue.js' }
-    }
-    // plugins: [
-    //     // new webpack.ProvidePlugin({
-    //     //     $: "jquery",
-    //     //     jQuery: "jquery",
-    //     //     jquery: "jquery",
-    //     //     "window.jQuery": "jquery"
-    //     // })
-    //     // ,
-    //     // new webpack.optimize.UglifyJsPlugin({
-    //     //     compress: { warnings: false }
-    //     // })
-    // ]
+        alias: { 'vue$': production()
+            ? 'vue/dist/vue.min.js'
+            : 'vue/dist/vue.js'
+        }
+    },
+    plugins: production()
+        ? [
+            new webpack.optimize.UglifyJsPlugin({
+                compress: { warnings: false }
+            })
+        ]
+        : [
+            // new webpack.ProvidePlugin({
+            //     $: "jquery",
+            //     jQuery: "jquery",
+            //     jquery: "jquery",
+            //     "window.jQuery": "jquery"
+            // })
+        ]
 };
