@@ -22,7 +22,7 @@
                         style="height: 400px; background-image: url(<?php echo $prj_data['featured_prj_image'] ?>)">
                     </div>
                 <?php else : ?>
-                    <video controls class="uk-responsive-width" width="900">
+                    <video controls autoplay class="uk-responsive-width" width="900">
                         <source src="<?php echo $prj_data['featured_prj_video'] ?>" type="video/mp4">
                     </video>
                 <?php endif; ?>
