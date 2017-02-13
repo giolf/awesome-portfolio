@@ -28,7 +28,7 @@
     <div v-cloak v-if="isAppReady" class="awesome-portfolio projects-table">
         <div class="uk-grid">
             <div v-for="project in projectsList"
-                class="uk-grid-margin uk-width-small-1-2 uk-width-medium-1-3 uk-width-large-1-4">
+                class="uk-grid-margin uk-width-small-1-2 uk-width-medium-1-3 uk-width-large-1-3">
                 <a :href="project.link">
                     <figure class="uk-overlay uk-overlay-hover"
                         data-uk-scrollspy="{cls:'uk-animation-fade', repeat: false, delay:1}">
