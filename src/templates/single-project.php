@@ -19,7 +19,7 @@
 
                 <?php if ($prj_data['main_file_type'] == 'img') : ?>
                     <div class="single-prj-img uk-cover-background"
-                        style="height: 400px; background-image: url(<?php echo $prj_data['featured_prj_image'] ?>">
+                        style="height: 400px; background-image: url(<?php echo $prj_data['featured_prj_image'] ?>)">
                     </div>
                 <?php else : ?>
                     <video controls class="uk-responsive-width" width="900">
