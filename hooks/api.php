@@ -6,7 +6,7 @@ function ajax_get_projects() {
     $query = new WP_Query([
         'post_type' => 'project',
         'post_status' => 'publish',
-        'posts_per_page' => 12,
+        'posts_per_page' => 9,
         'paged' => $_GET['page']
     ]);
 
